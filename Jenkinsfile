@@ -6,9 +6,9 @@ node{
     stage("Build")
         try{
             echo "Building.. 'sup nerd"
-            sh 'dotnet --version'
+            // sh 'dotnet --version'
             echo "Almost there buddy"
-            release()
+            releasenotes()
         }
         catch(ex){
             echo "There is an issue pal"
