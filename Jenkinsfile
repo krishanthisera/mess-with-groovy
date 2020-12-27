@@ -8,7 +8,7 @@ node{
             echo "Building.. 'sup nerd"
             // sh 'dotnet --version'
             echo "Almost there buddy"
-            @Library('releasenotes')
+            releasenotes()
         }
         catch(ex){
             echo "There is an issue pal"
