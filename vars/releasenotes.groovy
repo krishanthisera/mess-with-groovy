@@ -3,7 +3,7 @@ import groovy.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-// @NonCPS
+@NonCPS
 def call(Map config=[:]){
     def dir = new File(pwd());
     new File(dir.path + "/releasenote.md").withWriter('utf-8')
