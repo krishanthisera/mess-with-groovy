@@ -1,5 +1,6 @@
 import java.io.*;
 import groovy.io.*;
+import hudson.model.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -31,7 +32,7 @@ def call(Map config=[:]){
         for ( change in changeLogSets){
             def entries = change.items;
             for (entry in entries){
-                echo "${entry.commitID} by ${entry.author} on ${new Date(entry.timestamp)}: ${entry.msg}"
+                echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)}: ${entry.msg}"
                 for (file in entry.affectedFiles){
                     echo "\t ${file.editType.name} ${file.path}";
                 }
