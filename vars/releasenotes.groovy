@@ -17,4 +17,7 @@ def call(Map config=[:]){
                 writer.writeLine("\t" + "(f)" + file.name + "--->" + file.length());
         }
     }
+    def date = new Date();
+    def sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+    echo "The date is: " + sdf.format(date)
 }
